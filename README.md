@@ -64,7 +64,7 @@ The RFCOMM channel is found by trying channels 1–30 the first time and cached 
 
 - Connect / disconnect runs Omarchy's own `omarchy-bluetooth-device`.
 - Profile changes run `pactl set-card-profile`.
-- No network access, no sudo, and nothing is written outside that cache directory.
+- No network access, no root privileges, and nothing is written outside that cache directory.
 
 Only one app can hold the buds' serial link at a time, so the panel shows no battery details while another client (for example GalaxyBudsClient) is connected to them.
 
