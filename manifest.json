@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "id": "afrancoguevara.galaxy-buds",
   "name": "Galaxy Buds",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "author": "afrancoguevara",
   "license": "MIT",
   "description": "Samsung Galaxy Buds on the bar: left, right and case battery, connect/disconnect, and audio profile switching",
