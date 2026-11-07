@@ -181,8 +181,10 @@ Panel {
     anchors.fill: parent
     bar: root.bar
     readonly property bool withPercentage: root.showPercentage && root.connected && root.lowestBattery >= 0 && !vertical
-    text: withPercentage ? root.lowestBattery + "% " + root.earbudsIcon
-        : root.connected ? root.earbudsIcon : root.earbudsOffIcon
+    // The icon goes in `text` and the percentage in `labelText`: BarIconButton
+    // fits `text` into the icon canvas, so a "99% icon" string gets shrunk.
+    text: root.connected ? root.earbudsIcon : root.earbudsOffIcon
+    labelText: withPercentage ? root.lowestBattery + "%" : ""
     slotSize: Style.bar.iconSlot * (withPercentage ? 2 : 1)
     opacity: root.connected ? 1.0 : 0.6
     tooltipText: root.opened ? ""
